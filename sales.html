@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sales Module - Prosys ERP</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f9fbfd;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #002147, #004080);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: fadeDown 1s ease forwards;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1s ease forwards;
+      animation-delay: 0.4s;
+    }
+
+    .module-section {
+      max-width: 1200px;
+      margin: 30px auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 0 30px;
+      align-items: flex-start;
+    }
+
+    .module-text {
+      flex: 1 1 50%;
+    }
+
+    .module-text h2 {
+      font-size: 2rem;
+      color: #004080;
+      margin-bottom: 20px;
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: fadeDown 1s ease forwards;
+      animation-delay: 0.6s;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .feature-list li {
+      position: relative;
+      margin-bottom: 15px;
+      padding-left: 30px;
+      line-height: 1.6;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    .feature-list li::before {
+      content: "\f00c"; /* FontAwesome checkmark */
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      color: #ffa31a;
+    }
+
+    .feature-list li:nth-child(1) { animation-delay: 0.8s; }
+    .feature-list li:nth-child(2) { animation-delay: 1s; }
+    .feature-list li:nth-child(3) { animation-delay: 1.2s; }
+    .feature-list li:nth-child(4) { animation-delay: 1.4s; }
+    .feature-list li:nth-child(5) { animation-delay: 1.6s; }
+    .feature-list li:nth-child(6) { animation-delay: 1.8s; }
+    .feature-list li:nth-child(7) { animation-delay: 2s; }
+    .feature-list li:nth-child(8) { animation-delay: 2.2s; }
+    .feature-list li:nth-child(9) { animation-delay: 2.4s; }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background: #ffa31a;
+      color: black;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background: #cc8400;
+      color: white;
+    }
+
+    .module-image {
+      flex: 1 1 40%;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 1s ease forwards;
+      animation-delay: 1s;
+    }
+
+    .module-image img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 900px) {
+      .hero h1 { font-size: 2rem; }
+      .module-section {
+        flex-direction: column;
+      }
+      .module-text, .module-image {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/e5ee762576.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="hero">
+    <h1>Sales Module</h1>
+    <p>Empower your sales team to manage leads, close deals, track performance, and forecast sales effectively.</p>
+  </div>
+
+  <div class="module-section">
+    <div class="module-text">
+      <h2>Key Features</h2>
+      <ul class="feature-list">
+        <li>Maintain up-to-date information on prospects, close more deals, follow up with operations for timely delivery, and keep customers informed.</li>
+        <li>Systematic management of all leads and enquiries (no lost or forgotten enquiries).</li>
+        <li>Stages of Quotation tracking (Sales funnel management).</li>
+        <li>Maintain customer discussion details for each enquiry for timely action.</li>
+        <li>Convert Quotation to Order with one click.</li>
+        <li>Track sales team performance (Leads generated/Conversion).</li>
+        <li>Outstanding Receivables ageing analysis for faster collections.</li>
+        <li>Quotations Won/Lost analysis.</li>
+        <li>Sales forecasting (next month/quarter sales probability).</li>
+      </ul>
+      <a href="index.html#industries" class="back-btn">← Back to Modules</a>
+    </div>
+    <div class="module-image">
+      <img src="images/sales image" alt="Sales Module">
+    </div>
+  </div>
+</body>
+</html>
