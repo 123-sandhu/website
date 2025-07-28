@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stores Module - Prosys ERP</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f9fbfd;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #004080, #0073e6);/* neutral steel grey gradient for Stores */
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      display: inline-block;
+      font-size: 2.8rem;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+      background: rgba(255,255,255,0.1);
+      padding: 15px 30px;
+      border-radius: 50px;
+      opacity: 0;
+      animation: fadeZoomDown 1s ease forwards;
+    }
+
+    .hero h1 i {
+      margin-right: 10px;
+      font-size: 1.4rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+      opacity: 0;
+      animation: fadeZoomUp 1s ease forwards;
+      animation-delay: 0.4s;
+    }
+
+    .module-section {
+      max-width: 1200px;
+      margin: 40px auto 60px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 40px;
+      padding: 0 30px;
+    }
+
+    .module-text {
+      flex: 1 1 50%;
+    }
+
+    .module-text h2 {
+      color: #6e6e6e;
+      margin-bottom: 20px;
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: fadeDown 1s ease forwards;
+      animation-delay: 0.6s;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .feature-list li {
+      position: relative;
+      margin-bottom: 15px;
+      padding-left: 30px;
+      line-height: 1.6;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    .feature-list li::before {
+      content: "\f00c"; /* FontAwesome checkmark */
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      color: #ffa31a;
+    }
+
+    .feature-list li:nth-child(1) { animation-delay: 0.8s; }
+    .feature-list li:nth-child(2) { animation-delay: 1s; }
+    .feature-list li:nth-child(3) { animation-delay: 1.2s; }
+    .feature-list li:nth-child(4) { animation-delay: 1.4s; }
+    .feature-list li:nth-child(5) { animation-delay: 1.6s; }
+    .feature-list li:nth-child(6) { animation-delay: 1.8s; }
+    .feature-list li:nth-child(7) { animation-delay: 2s; }
+    .feature-list li:nth-child(8) { animation-delay: 2.2s; }
+    .feature-list li:nth-child(9) { animation-delay: 2.4s; }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background: #ffa31a;
+      color: black;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background: #cc8400;
+      color: white;
+    }
+
+    .module-image {
+      flex: 1 1 45%;
+      opacity: 0;
+      transform: scale(0.9) translateX(50px);
+      animation: slideInRightScale 1s ease forwards;
+      animation-delay: 1s;
+    }
+
+    .module-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease;
+    }
+
+    .module-image img:hover {
+      transform: scale(1.03);
+    }
+
+    @keyframes fadeZoomDown {
+      from { opacity: 0; transform: translateY(-40px) scale(0.95); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @keyframes fadeZoomUp {
+      from { opacity: 0; transform: translateY(40px) scale(0.95); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInRightScale {
+      from { opacity: 0; transform: translateX(50px) scale(0.9); }
+      to { opacity: 1; transform: translateX(0) scale(1); }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .module-section { flex-direction: column; }
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/e5ee762576.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="hero">
+    <h1><i class="fas fa-warehouse"></i> Stores Module</h1>
+    <p>Maintain optimal inventory levels with real-time stock visibility for faster, informed decisions.</p>
+  </div>
+
+  <div class="module-section">
+    <div class="module-text">
+      <h2>Key Features</h2>
+      <ul class="feature-list">
+        <li>Stores & Inventory can be maintained at optimal levels with real-time stock availability for all users.</li>
+        <li>Access stock instantly without dependence on Stores or Accounts for better transparency and faster decisions.</li>
+        <li>Get stock with a click and have more time for stock checks.</li>
+        <li>A, B, C analysis of stock.</li>
+        <li>Categorize stock into groups for easy analysis as per industry norms.</li>
+        <li>Maintain Minimum (ROL) stock for critical items.</li>
+        <li>Track stock at Stores, Shop Floor, JW Vendors, Service Engineers, etc.</li>
+        <li>Assign rack location for easy storing & retrieving.</li>
+        <li>Maintain source document for all inward/outward operations with real-time inventory reports.</li>
+      </ul>
+      <a href="index.html#industries" class="back-btn">← Back to Modules</a>
+    </div>
+    <div class="module-image">
+      <img src="images/stores.png" alt="Stores Module">
+    </div>
+  </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
